@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App{
+    @apply w-full h-screen bg-custme overflow-hidden
+}
+
+.link-nav{
+    @apply text-white w-fit flex items-center h-11 font-bold ;
+}
+.form-input{
+    @apply bg-white rounded-md border-purple-900 border-2 sm:w-80 w-64 mt-4 p-2 box-border
+        text-purple-500 focus:outline-none font-bold ;
+}
+.form-label{
+    @apply text-dark-gray text-xl block mt-5 relative left-1/2 -translate-x-1/2 font-bold mx-3;
+}
+.cont{
+    @apply flex justify-center
+}
+.form{
+    @apply w-full h-full border-2 border-purple-500 rounded 
+}
+.btn {
+    @apply w-36 h-16 border-2 border-purple-800  rounded-md
+        hover:bg-purple-600 text-white transition hover:shadow-purple-600
+           hover:scale-75 font-bold
+}
+.greenbtn {
+    @apply w-36 h-7 border-2 border-main-green  rounded-md
+        hover:bg-main-green text-main-green hover:text-white transition hover:shadow-main-green
+           hover:scale-75 font-bold
+}
+.redbtn {
+    @apply w-36 h-7 border-2 border-main-red  rounded-md
+        hover:bg-main-red hover:text-white text-main-red transition hover:shadow-main-red
+           hover:scale-75 font-bold
+}
+.task{
+    @apply w-full bg-glass hover:bg-hover transition
+            text-white h-auto min-h-10 flex items-center p-1 rounded-md
+}
+.categories{
+     @apply  h-auto w-96 gap-1  relative rounded-2xl
+             shadow-custom sm:mt-7 flex sm:flex-col flex-row items-baseline 
+             justify-around p-4 sm:mb-0 mb-0.5  sm:w-56 sm:h-80
+}
+.category{
+    @apply w-full bg-glass hover:bg-hover transition text-white 
+            h-auto min-h-10 flex items-center font-bold justify-center p-1 rounded-md
+}
+.error{
+    @apply w-full bg-white mt-4 box-border font-extrabold
+            text-main-red h-auto min-h-10 flex items-center p-1 rounded-md
+}
+.completed{
+    @apply size-5 border-2 bg-main-green rounded-md box-border
+}
+.notcompleted{
+    @apply size-5 border-2 bg-glass rounded-md box-border
+}
+
+.left{
+    left:85%;
+}
+.width{
+    width: 400px;
+}
+.height { 
+    height: calc(100vh - 40px);
+}

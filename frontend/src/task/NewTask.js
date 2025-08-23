@@ -18,9 +18,9 @@ const NewTask = ()=>{
         <div className="flex justify-center mt-10">
         <form onSubmit={handleSubmit} className=" bg-custme-glass rounded-lg shadow-custom w-96 box-border p-4 h-96">
             <label className="form-label mx-3">Category</label>
-            <input className="form-input m-auto" type='text' value={category} onChange={(e)=> setCategory(e.target.value)} onFocus={()=>{setError("") ; setCategory("")}}/>
+            <input className="form-input m-auto min-w-80" type='text' value={category} onChange={(e)=> setCategory(e.target.value)} onFocus={()=>{setError("") ; setCategory("")}}/>
             <label className="form-label mx-3">Content</label>
-            <input className="form-input" type='text' value={task} onChange={(e)=> setTask(e.target.value)} onFocus={()=>{setError("")}} />
+            <input className="form-input min-w-80" type='text' value={task} onChange={(e)=> setTask(e.target.value)} onFocus={()=>{setError("")}} />
             <div className={error === "" ? (null) : ("error")}>{error}</div>
             <button className='btn translate-x-24 translate-y-12'>{isLoading ? ("waiting.."):("Add New Task") }</button>
         </form>

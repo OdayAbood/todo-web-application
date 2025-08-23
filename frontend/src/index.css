@@ -11,7 +11,7 @@
 }
 .form-input{
     @apply bg-white rounded-md border-purple-900 border-2 sm:w-80 w-64 mt-4 p-2 box-border
-        text-purple-500 focus:outline-none font-bold ;
+        text-purple-500 focus:outline-none font-bold  ;
 }
 .form-label{
     @apply text-dark-gray text-xl block mt-5 relative left-1/2 -translate-x-1/2 font-bold mx-3;

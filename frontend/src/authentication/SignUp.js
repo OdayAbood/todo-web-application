@@ -22,7 +22,7 @@ const SignUp = ()=>{
             <label className="form-label">LastName</label>
             <input  className="form-input" type='text' value={lastname} onChange={(e)=>{setLastname(e.target.value)}}  onFocus={()=>{setError("")}}/>
             <label className="form-label ">Email</label>
-            <input className="form-input m-auto" type='text' value={email} onChange={(e)=>{setEmail(e.target.value)}}  onFocus={()=>{setError("")}} />
+            <input className="form-input m-auto" type='email' value={email} onChange={(e)=>{setEmail(e.target.value)}}  onFocus={()=>{setError("")}} />
             <label className="form-label ">PassWord</label>
             <input className="form-input" type='password' value={password} onChange={(e)=>{setPassword(e.target.value)}}  onFocus={()=>{setError("")}}   />
             <div className={error === "" ? (null) : ("error")}>{error}</div>

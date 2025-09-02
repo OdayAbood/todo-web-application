@@ -10,7 +10,7 @@ export const TaskHook = () => {
 
     const getTasks = async ()=>{
         setLoading(true);
-        const res = await fetch("http://localhost:4000/api/task/tasks",{
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/task/tasks`,{
             method:"GET",
             headers : {"Content-Type" : "application/json"},
             credentials : 'include'
@@ -29,7 +29,7 @@ export const TaskHook = () => {
 
     const getCompletedTasks = async ()=>{
         setLoading(true);
-        const res = await fetch("http://localhost:4000/api/task/completedtasks",{
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/task/completedtasks`,{
             method:"GET",
             headers : {"Content-Type" : "application/json"},
             credentials : 'include'
@@ -49,7 +49,7 @@ export const TaskHook = () => {
 
     const getPersonalTasks = async ()=>{
         setLoading(true);
-        const res = await fetch("http://localhost:4000/api/task/personaltasks",{
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/task/personaltasks`,{
             method:"GET",
             headers : {"Content-Type" : "application/json"},
             credentials : 'include'
@@ -70,7 +70,7 @@ export const TaskHook = () => {
 
     const getWorkTasks = async ()=>{
         setLoading(true);
-        const res = await fetch("http://localhost:4000/api/task/worktasks",{
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/task/worktasks`,{
             method:"GET",
             headers : {"Content-Type" : "application/json"},
             credentials : 'include'
@@ -91,7 +91,7 @@ export const TaskHook = () => {
 
     const addTask = async (task , setError)=>{
          setLoading(true);
-        const res = await fetch("http://localhost:4000/api/task/newtask",{
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/task/newtask`,{
             method:"POST",
             headers : {"Content-Type" : "application/json"},
             credentials : 'include',
@@ -114,7 +114,7 @@ export const TaskHook = () => {
 
     const deleteTask = async (taskId)=>{
          setLoading(true);
-        const res = await fetch(`http://localhost:4000/api/task/delete/${taskId}`,{
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/task/delete/${taskId}`,{
             method:"DELETE",
             headers : {"Content-Type" : "application/json"},
             credentials : 'include'
@@ -138,7 +138,7 @@ export const TaskHook = () => {
     
     const updateTask = async (task,taskId)=>{
          setLoading(true);
-        const res = await fetch(`http://localhost:4000/api/task/update/${taskId}`,{
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/task/update/${taskId}`,{
             method:"PATCH",
             headers : {"Content-Type" : "application/json"},
             credentials : 'include',
@@ -163,7 +163,7 @@ export const TaskHook = () => {
          setLoading(true);
          try{
 
-             const res = await fetch(`http://localhost:4000/api/task/update/complete/${taskId}`,{
+             const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/task/update/complete/${taskId}`,{
                  method:"PATCH",
                  headers : {"Content-Type" : "application/json"},
                  credentials : 'include',

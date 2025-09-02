@@ -6,7 +6,7 @@ export const SignUpHook= ()=> {
      const [isLoading , setLoading] = useState(false);
      const signUp = async (user , setError)=>{
         setLoading(true);
-        const res = await fetch("http://localhost:4000/api/user/signup",{
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/user/signup`,{
             method : "POST",
             credentials : 'include',
             headers : {"Content-Type" : "application/json"} ,

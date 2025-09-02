@@ -2,6 +2,9 @@
   "build": {
     "root": "backend",
     "buildCommand": "npm install",
-    "startCommand": "npm start"
+    "startCommand": "npm start",
+     "dockerfile": "backend/Dockerfile",
+    "context": "backend"
   }
 }
+

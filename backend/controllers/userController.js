@@ -46,17 +46,20 @@ const signIn = async (req , res )=>{
         if(!isUserExist) res.json({succeed : false , mess:"This email is not exist go and sign up"});
         
         if(isUserExist.email === email){
-            const match = bcrypt.compare(password , isUserExist.password);
+            if(!password) return res.json({succeed : false , mess:"Enter Your Password"}); 
+            const match = await bcrypt.compare(password , isUserExist.password);
             
             if(match) {
                 const token = createToken(isUserExist._id);
+
+                console.log(match);
                 
                 res.cookie("jwt" , token , {httpOnly : true , maxAge: 1000 * 60 * 60 * 24 * 7});
                 
                 res.json({succeed : true , mess:"The user is logged in"});
             }
             
-            else res.json({succeed : false , mess:"Enter a valid password"});
+            else return res.json({succeed : false , mess:"Enter a valid password"});
         }
     }
     catch(err){
